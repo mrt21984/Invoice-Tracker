@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invoice Tracker</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center bg-success text-light mb-3 col-12" style="height: 10vh">
+            <h2>Invoice Tracker</h2>
+        </header>
+        <main>
+            <section class="inputsDiv row">
+                <label for="" class="col-3">Invoice Number</label>
+                <input type="text" id="invNum" class="form-control col-7 offset-1">
+                <label for="" class="col-3">Company</label>
+                <select name="" id="invComp" class="form-control col-7 offset-1">
+                    <option value="Chariton-Produce">Chariton</option>
+                    <option value="PDI">PDI</option>
+                    <option value="Gradies">Gradies</option>
+                    <option value="Fox">Fox</option>
+                    <option value="Leafy-Gree">Leafy-Green</option>
+                    <option value="Cherokee">Cherokee</option>
+                    <option value="Enicen">Enicen</option>
+                </select>
+                <label for="" class="col-3">Date</label>
+                <input type="date" id="invDate" class="form-control col-7 offset-1">
+                <label for="" class="col-3">Amount</label>
+                <input type="number" id="invAmt" class="form-control col-7 offset-1">
+                <label for="" class="col-3">Expected Sales</label>
+                <input type="number" id="invSales" class="form-control col-7 offset-1">
+
+                <input type="button" value="Add Invoice" id="addBtn" class="btn btn-primary col-4 offset-4 mt-3 mb-3">
+            </section>
+            <section class="totalDiv">
+                <table class="table table-striped table-responsive">
+                    <thead>
+                        <th>Invoice Count</th>
+                        <th>Invoice Amount</th>
+                        <th>Expected Sales</th>
+                        <th>Gross percent</th>
+                    </thead>
+                    <tbody id="totals-table">
+
+                    </tbody>
+                </table>
+            </section>
+            <section class="inoviceTable">
+                <table class="table table-striped" id="invoiceTable">
+                    <thead>
+                        <th>Inv Num</th>
+                        <th>Company</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Sales</th>
+                        <th>Gross %</th>
+                    </thead>
+                    <tbody id="invoice-table">
+
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="invoiceTracker.js"></script>
+</body>
+
+</html>
